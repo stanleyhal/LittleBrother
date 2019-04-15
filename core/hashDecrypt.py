@@ -15,4 +15,4 @@ def hashdecrypt():
 	if password:
 		print("\n"+found+" %s : %s" % (hash, password))
 	else:
-		print("\n"+warning+" %s : Not match found." % (hash))
+		print("\n"+warning+" %s : Nessun valore (match) trovato." % (hash))
