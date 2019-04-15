@@ -18,30 +18,30 @@ def facebookStalk():
 
 	menuStalk = """
 
-        TAGS              PERSONNES              LIEUX
+        TAGS              PERSONE              LUOGHI
     ------------        -------------        -------------
-    [1] Photos          [4] Famille          [10] Tout
-    [2] Videos          [5] Amis             [11] Bars
-    [3] Publication     [6] Amis en commun   [12] Restaurants
-                        [7] Travail          [13] Magasin
-        LIKE            [8] Etude            [14] Exterieur
-    ------------        [9] Locaux           [15] Hotels
-    [17] Photos                              [16] Theatre
-    [18] Videos          COMMENTAIRE
-    [19] Publications   -------------          INTERETS     
+    [1] Foto          	[4] Famiglia         [10] Tutto
+    [2] Video           [5] Amici            [11] Bar
+    [3] Pubblicazioni   [6] Amici in comune  [12] Ristoranti
+                        [7] Lavoro           [13] Centri commerciali
+        LIKE            [8] Studio           [14] Esterni
+    ------------        [9] Locali           [15] Hotel
+    [17] Foto                                [16] Teatri
+    [18] Video           COMMENTI
+    [19] Pubblicazioni   -------------          INTERESSI     
                         [20] Photos          -------------
-        PROFIL                               [29] Pages
-    -------------                            [30] Politiques
-    [21] Photos                              [31] Religion
-    [22] Videos                              [32] Musiques
-    [23] Publications                        [33] Films
-    [24] Groupes                             [34] Livres
-    [25] Futur evenements                    [35] Lieux
-    [26] Evenements passes
-    [27] Jeux
+        PROFILI                              [29] Pagine
+    -------------                            [30] Politica
+    [21] Foto                                [31] Religione
+    [22] Video                               [32] Musica
+    [23] Pubblicazioni                       [33] Film
+    [24] Gruppi                              [34] Libri
+    [25] Prossimi eventi                     [35] Luoghi
+    [26] Eventi passati
+    [27] Giochi
     [28] Apps
 
-        [b] Back    [c] Clear screen    [e] Exit script
+        [b] Tornare al menu principale    [c] Ripulisce la schermata    [e] Esci dallo script
 	"""
 
 	dicFbStalk = {
@@ -91,9 +91,9 @@ def facebookStalk():
 	}
 
 	helpMsgFbStalk = """
-		back : Revenir au menu principal.
-		exit / quit  : Pour quitter le logiciel.
-		clear : Efface l'ecran."""
+		back : Tornare al menu principale.
+		exit / quit  : Esci dallo script.
+		clear : Ripulisce la schermata."""
 
 	resultProfile = """
     [Name]  %s
@@ -113,15 +113,15 @@ def facebookStalk():
 		facebookID = ID
 
 	except:
-		print("\n"+warning+" Une erreur est survenue !")
+		print("\n"+warning+" Errore !")
 
 	while True:
 
 		if not facebookID:
-			print("\n"+warning+" Impossible de recuperer l'ID.")
-			print(question+"\n Connaissez-vous l'ID ?")
-			_id_  = input(question+" [O/N]: ")
-			if _id_.upper() == "O" or _id_.upper() == "Y":
+			print("\n"+warning+" Impossibile recuperare l'ID.")
+			print(question+"\n L'ID è conosciuto ?")
+			_id_  = input(question+" [S/N]: ")
+			if _id_.upper() == "S" or _id_.upper() == "Y":
 				facebookID = input(" ID: ")
 				input(facebookID)
 			else:
