@@ -11,7 +11,7 @@ class facebookSearchTool:
 		try:
 			page = requests.get(url % (name)).content.decode('utf-8')
 		except:
-			print(warning+" Aucun résultat.")
+			print(warning+" Nessun risultato.")
 
 		data = page
 
@@ -54,7 +54,7 @@ class facebookSearchTool:
 				url = url.replace("https://www.facebook.com/", '')
 				c = url.count("/")
 				if c == 1:
-					pass  # un url avec 2 fois "/" signifie que c'est une page.
+					pass  # una url con 2 volte "/" significa che è una pagina FB.
 				else:
 					usersAccount.append(url)
 
