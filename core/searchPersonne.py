@@ -21,9 +21,9 @@ init()
 
 def searchPersonne(codemonpays):
 
-	nom = input(" Nom, Prénom: ")
-	city = input(" Ville/Departement: ")
-	print("\n"+wait+" Recherche...")
+	nom = input(" Cognome, Nome: ")
+	city = input(" Città/Provincia: ")
+	print("\n"+wait+" Ricerca...")
 
 	try:
 
@@ -58,6 +58,12 @@ def searchPersonne(codemonpays):
 			url = "https://www.yellow.lu/fr/pages-blanches/recherche?query={}"
 			searchYellowLU(url.format(nom))
 
+		elif codemonpays == 'IT':
+			# Italian search
+			url = "https://www.paginegialle.it/ricerca?query={}"
+			requete = requests.get(url.format(nome, città))
+			searchPG(requete)
+
 		else:
 	        # Recherche FR
 			url = "https://www.pagesjaunes.fr/pagesblanches/recherche?quoiqui={}&ou={}"
@@ -76,6 +82,10 @@ def searchPersonne(codemonpays):
 			# Recherche LU
 			url = "https://www.yellow.lu/fr/pages-blanches/recherche?query={}"
 			searchYellowLU(url.format(nom))
+
+			# Recherche IT
+			url = "https://www.paginegialle.it/ricerca?qs={}&dv={}"
+			searchPG(requete)
 
 # Copain d'avant search
 		searchCopainsdavant(nom, city)
