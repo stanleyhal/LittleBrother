@@ -56,7 +56,7 @@ def searchGoogle(requete='', requete2=''):
 				if not "/settings/ads" in url:
 					if not "/policies/faq" in url:
 					# if "insta" in url or "twitter" in url or "facebook" in url:
-						print("[++] Possible connection: "+url)
+						print("[++] Possibile collegamento: "+url)
 	else:
 		pass
 
@@ -72,4 +72,4 @@ def searchGoogle(requete='', requete2=''):
 			if not "/settings/ads" in url:
 				if not "/policies/faq" in url:
 				# if "insta" in url or "twitter" in url or "facebook" in url:
-					print("[+] Possible connection: "+url)
+					print("[+] Possibile collegamento: "+url)
