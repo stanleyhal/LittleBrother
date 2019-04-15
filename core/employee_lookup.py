@@ -10,10 +10,10 @@ wait = "["+Fore.MAGENTA+"*"+Fore.RESET+"]"
 init()
 
 def employee_lookup():
-	entreprise = input(" Entreprise: ")
-	city = input(" Ville: ")
+	entreprise = input(" Azienda: ")
+	city = input(" Città: ")
 
-	print("\n"+wait+" Recherche des employés de '%s'...\n" % (entreprise))
+	print("\n"+wait+" Ricerca dei dipendenti della '%s'...\n" % (entreprise))
 
 	linkedin = searchLinkedIn()
 	linkedin.search(entreprise, city)
