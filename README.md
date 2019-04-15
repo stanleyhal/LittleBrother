@@ -84,5 +84,7 @@ Features
 	- Creatore di Profili
 
 Contributors
-=
+= 
+❤️ [lulz3xploit](https://github.com/lulz3xploit) ❤
+= 
 ❤️ [H3L](https://github.com/lrhel) ❤
