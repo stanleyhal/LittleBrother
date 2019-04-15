@@ -1,64 +1,65 @@
 helpMain = """
- Name                       Action
+ Nome                       Azione
  ----                       ------<
- Lookup                     Faire des recherches sur une personne.
- Other Tool                 Utiliser des outils autre que pour de la reconnaissance.
- Make file                  Creer un fichier '.txt' pour y ecrire les infos obtenu.
- Show Database              Accedez a la base de donnee.
+ Lookup                     Effettuare ricerche su una persona.
+ Other Tool                 Utilizzare strumenti diversi da quelli per il riconoscimento.
+ Make file                  Creare un file '.txt' per scrivere le info ottenute.
+ Show Database              Visualizzare il database.
 
- Exit                       Quitter le logiciel.
- Help                       Affiche se message.
- Clear                      Efface l'ecran."""
+ Back main menu             Ritorna al menu principale.
+ Exit script                Termina lo script.
+ Clear screen               Ripulire la schermata."""
 
 helpLookup = """
- Name                             Action
+ Nome                             Azione
  ----                             ------
-[1]  Personne lookup                  Faire des recherches avec un nom, prenom et (ville).
-[2]  Username lookup                  Faire des recherches avec un pseudonyme.
-[3]  Adresse lookup                   Faire des recherches avec une adresse.
-[4]  Phone lookup                     Faire des recherches avec un numero de telephone.
-[5]  IP lookup                        Faire des recherches avec une adresse IP.
-[6]  SSID locator                     Faire des recherches avec une adresse MAC/BSSID
-[7]  Email lookup                     Faire des recherches avec une adresse email.
-[8]  Mail tracer                      Faire des recherches avec l'entete d'un mail.
-[9]  Employés recherche               Recherche les employés d'une entreprise.
-[10] Google search                    Faire des recherches sur google.
-[11] Facebook graphSearch             Faire des recherche grace au graphSearch.
-[12] twitter info                     Recuperer les informations d'un compte Twitter.
-[13] instagram info                   Recuperer les informations d'un compte Instagram.
+[1]  Lookup di persona            Effettua ricerche su Cognome, Nome e (città).
+[2]  Lookup di username           Effettua ricerche su username.
+[3]  Lookup di indirizzo          Effettua ricerche su un indirizzo.
+[4]  Lookup di nr. telef          Effettua ricerche su un numero di telefono.
+[5]  IP lookup                    Effettua ricerche su un indirizzo IP.
+[6]  SSID locator                 Effettua ricerche su un MAC address/BSSID
+[7]  Lookup di email              Effettua ricerche su un indirizzo email.
+[8]  Mail tracer                  Effettua ricerche sull'header di una email.
+[9]  Ricerca dipendenti           Ricerca i dipendenti di un'azienda.
+[10] Google search                Effettua ricerche su Google.
+[11] Facebook graphSearch         Effettua ricerche con graphSearch.
+[12] Twitter info                 Recupera le informazioni di un account Twitter.
+[13] Instagram info               Recupera le informazioni di un account Instagram.
 
-[b]  Back main menu                   Revenir au menu principal.
-[e]  Exit script                      Pour quitter le logiciel.
-[c]  Clear screen                     Efface l'ecran.
-[h]  Help Message                     Affichez ce message."""
+[b]  Back main menu               Ritorna al menu principale.
+[e]  Exit script                  Termina lo script.
+[c]  Clear screen                 Ripulire la schermata.
+[h]  Help Message                 Visualizza questo messaggio."""
 helpOtherTool = """
- Name                             Action
+ Nome                             Azione
  ----                             ------
- Hash decrypter                   Essaye de décrypter un hash via une base de donnée en ligne.
+ Hash decrypter                   Tenta di decriptare un hash tramite database online.
 
- Back main menu                   Revenir au menu principal.
- Exit script                      Pour quitter le logiciel.
- Clear screen                     Efface l'ecran."""
+ Back main menu                   Ritorna al menu principale.
+ Exit script                      Termina lo script.
+ Clear screen                     Ripulire la schermata."""
 
 helpProfiler = """
- Name                      Action
+ Nome                      Azione
  ----                      ------
- Search Profiles           Recherche un profile dans la base de donnee.
- Show all Profiles         Affiche tout les profiles de la base de donnee.
+ Cerca Profili     		      Ricerca un profilo nel database.
+ Visualizza Profili        Visualizza tutti i profili del database.
 
- Exit Database             Quitte la base de donnee pour retourner au menu principal.
- Help message              Affiche se message
+ Exit Database             Chiudi database e ritorna al menu pricipale.
+ Help message              Visualizza questo messaggio
 """
 
 helpCountry = """
  Name                      Action
  ----                      ------
- FR                        Utiliser les services Francais.
- BE                        Utiliser les services Belge.
- CH                        Utiliser les services Suisse.
- LU                        Utiliser les services Luxembourgeois.
- All                       Utiliser tout les services.
+ FR                        Utilizza i servizi Francesi.
+ BE                        Utilizza i servizi Belghi.
+ CH                        Utilizza i servizi Svizzeri.
+ LU                        Utilizza i servizi Lussemburghesi.
+ All                       Utilizza tutti i servizi.
+ IT                        Utilizza i servizi Italiani.
 
- Back main menu            Revenir au menu principal.
- Exit script               Pour quitter le logiciel.
- Clear screen              Efface l'ecran."""
+ Back main menu            Ritorna al menu principale.
+ Exit script               Termina lo script.
+ Clear screen              Ripulire la schermata."""
