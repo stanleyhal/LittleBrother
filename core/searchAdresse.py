@@ -1,6 +1,7 @@
 import requests
 from core.searchLocalCH import searchLocalCH
 from core.searchYellowLU import searchYellowLU
+from core.searchYellowIT import searchYellowIT
 from core.searchPJ import searchPJ
 from colorama import init, Fore,  Back,  Style
 
@@ -12,9 +13,9 @@ wait = "["+Fore.MAGENTA+"*"+Fore.RESET+"]"
 init()
 
 def searchAdresse(codemonpays):
-	adresse = input(" Adresse: ")
+	adresse = input(" Indirizzo: ")
 	# clear()
-	print("\n"+wait+" Recherche '%s'..." % (adresse))
+	print("\n"+wait+" Ricerca '%s'..." % (adresse))
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
@@ -35,6 +36,11 @@ def searchAdresse(codemonpays):
 		# search tel.local.hc
 		url = "https://tel.local.ch/fr/q?ext=1&name=&company=&street={}&city=&area="
 		searchLocalCH(url.format(adresse))
+
+	elif codemonpays == "IT":
+		# search tel.local.hc
+		url = "https://www.paginebianche.it/cerca-da-indirizzo?dv="
+		searchLocalIT(url.format(adresse))
 
 	else:
 		# Recherche FR
