@@ -9,8 +9,8 @@ wait = "["+Fore.MAGENTA+"*"+Fore.RESET+"]"
 
 
 def ipFinder():
-	ip = input(" Adresse IP: ")
-	print("\n"+wait+" Locating '%s'..." % (ip))
+	ip = input(" Indirizzo IP: ")
+	print("\n"+wait+" Ricerca '%s'..." % (ip))
 
 	TABLE_DATA = []
 
@@ -21,27 +21,27 @@ def ipFinder():
 	status = values['status']
 
 	if status != "success":
-		print(warning+" Adresse IP invalide.")
+		print(warning+" Indirizzo IP non valido.")
 
 	else:
 		infos = ("IP", ip)
 		TABLE_DATA.append(infos)
 		infos = ("ISP", values['isp'])
 		TABLE_DATA.append(infos)
-		infos = ("Organisation", values['org'])
+		infos = ("Organizzazione", values['org'])
 		TABLE_DATA.append(infos)
-		infos = ("Pays", values['country'])
+		infos = ("Paese", values['country'])
 		TABLE_DATA.append(infos)
-		infos = ("Region", values['regionName'])
+		infos = ("Regione", values['regionName'])
 		TABLE_DATA.append(infos)
-		infos = ("Ville", values['city'])
+		infos = ("Città", values['city'])
 		TABLE_DATA.append(infos)
-		infos = ("Code Postal", values['zip'])
+		infos = ("CAP", values['zip'])
 		TABLE_DATA.append(infos)
 		localisation = str(values['lat'])+', '+str(values['lon'])
-		infos = ("Localisation", localisation)
+		infos = ("Geo-localizzazione", localisation)
 		TABLE_DATA.append(infos)
-		infos = ("Maps", "https://www.google.fr/maps?q="+localisation)
+		infos = ("Maps", "https://www.google.it/maps?q="+localisation)
 		TABLE_DATA.append(infos)
 
 		table = SingleTable(TABLE_DATA, ip)
@@ -50,10 +50,10 @@ def ipFinder():
 		# print("\n IP: " + ip)
 		# print(" Hostname: " + values['ipName'])
 		# print(" ISP: " + values['isp'])
-		# print(" Organisation: "+values['org'])
-		# print(" Pays: " + values['country'])
-		# print(" Region: " + values['region'])
-		# print(" Ville: " + values['city'])
+		# print(" Organizzazione: "+values['org'])
+		# print(" Paese: " + values['country'])
+		# print(" Regione: " + values['region'])
+		# print(" Città: " + values['city'])
 		# localisation = str(values['lat']) + ','+str(values['lon'])
-		# print(" Localisation: "+localisation)
-		# print(" + Maps: https://www.google.fr/maps?q=%s" % (localisation))
+		# print(" Geo-localizzazione: "+localisation)
+		# print(" + Maps: https://www.google.it/maps?q=%s" % (localisation))
