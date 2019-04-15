@@ -32,12 +32,12 @@ def searchInstagram():
 
 
 	print("\n[%s]\n" % (username))
-	print(found+" Name: %s" % (name))
-	print(found+" Pictures: %s" % (images))
+	print(found+" Nome: %s" % (name))
+	print(found+" Immagine: %s" % (images))
 	print(found+" ID: %s" % (userId))
-	print(found+" Protected: %s" % (private))
-	print(found+" Abonnés: %s  |  Abonnements: %s" % (followers, friend))
-	print(found+" Publication: %s" % (publication))
+	print(found+" Protetto: %s" % (private))
+	print(found+" Follower: %s  |  Following: %s" % (followers, friend))
+	print(found+" Pubblicazioni: %s" % (publication))
 	print(found+" Bio: %s" % (bio))
 
 	if url:
@@ -45,29 +45,29 @@ def searchInstagram():
 	if email:
 		print(found+" Email: %s" % (email))
 	if phone:
-		print(found+" Telephone: %s" % (phone))
+		print(found+" Telefono: %s" % (phone))
 	if adresse:
-		print(found+" Lieux: %s" % (adresse))
+		print(found+" Indirizzo: %s" % (adresse))
 
 	if not private:
-		print("\n"+question+" Voulez vous télécharger les 12 dernières photos postées ?")
+		print("\n"+question+" Vuoi scaricare le ultime 12 foto pubblicate ?")
 
 		while True:
-			choix = input("\n [o/N]: ")
+			choix = input("\n [S/N]: ")
 
 			if choix == "" or choix.upper() == "N":
 				break
 			
-			elif choix.upper() == "O":
-				print("\n"+question+" Ou voulez-vous enregistrer les photos ?")
+			elif choix.upper() == "S":
+				print("\n"+question+" Dove vuoi salvare le foto ?")
 				pathDefault = os.getcwd()
-				print(Fore.YELLOW+" Default path: "+pathDefault+Fore.RESET)
-				path = input("\n Path: ")
-				print("\n"+wait+" Téléchargement des photos de '%s'\n" % (user))
+				print(Fore.YELLOW+" Percorso di default : "+pathDefault+Fore.RESET)
+				path = input("\n Percorso: ")
+				print("\n"+wait+" Download delle foto di '%s'\n" % (user))
 			
 				if not path:
 					path = pathDefault
 			
 				insta.downloadPictures(urlProfil, path)
-				print("\n"+found+" Téléchargement fini.")
+				print("\n"+found+" Download effettuato.")
 				break
