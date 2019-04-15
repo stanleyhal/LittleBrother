@@ -12,7 +12,7 @@ def checkVersion():
 	if int(version) == 3:
 		pass
 	else:
-		sys.exit(warning+" Veuillez lancer la version 3 de python.")
+		sys.exit(warning+" E' preferibile utilizzare la versione 3 di Python.")
 
 def clear():
 	if os.name == 'nt':
