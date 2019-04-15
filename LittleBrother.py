@@ -46,44 +46,44 @@ thread_loading()
 
 mainOption = """
  [1] Lookup
- [2] Other tool
+ [2] Altri tool
  [3] Profiler
- [4] Change country
+ [4] Cambia Nazionalità
 
- [e] Exit script    [h] Help Message    [c] Clear Screen"""
+ [e] Esci dallo script    [h] Aiuto    [c] Ripulisci Schermata"""
 
 
 lookupOption = """
- [1] Personne lookup          [8] Mail tracer
- [2] Username lookup          [9] Employés recherche
- [3] Adresse lookup           [10] Google search
- [4] Phone lookup             [11] Facebook GraphSearch
- [5] IP lookup                [12] twitter info
- [6] SSID locator             [13] instagram info
- [7] Email lookup
+ [1] Lookup di persona        [8] Mail tracer
+ [2] Lookup di username       [9] Ricerca dipendenti
+ [3] Lookup di indirizzo      [10] Google search
+ [4] Lookup di nr telef.      [11] Facebook GraphSearch
+ [5] IP lookup                [12] Twitter info
+ [6] SSID locator             [13] Instagram info
+ [7] Lookup di email
 
- [b] back main menu    [e] Exit script    [h] Help Message    [c] Clear Screen"""
+ [b] Torna al menu principale    [e] Esci dallo script    [h] Aiuto    [c] Ripulisci Schermata"""
 
 otherToolOption = """
  [1] Hash decrypter
 
- [b] back main menu    [e] Exit script    [h] Help Message    [c] Clear Screen
+ [b] Torna al menu principale    [e] Esci dallo script    [h] Aiuto    [c] Ripulisci Schermata
 """
 
 profilerOption = """
- [1] Profiler
- [2] Show all Profiles
- [3] Create profile
+ [1] Profilazione
+ [2] Mostra tutti i Profili
+ [3] Crea profilo
 
- [b] back main menu    [c] Clear screen   [h] Help message
+ [b] Torna al menu principale    [c] Ripulisci Schermata   [h] Aiuto
 """
 
 countryMenu = """
  [1] FR (France)     [4] LU (Luxembourg)
  [2] BE (Belgique)   [5] All (FR, BE, CH, LU)
- [3] CH (Suisse)
+ [3] CH (Suisse)	 [6] IT (Italy)
 
- [b] back main menu   [c] Clear screen   [h] Help message
+ [b] Torna al menu principale   [c] Ripulisci Schermata   [h] Aiuto
 """
 
 clear()
@@ -124,9 +124,9 @@ try:
 					menu()
 					print(profilerOption)
 				elif choix.lower() == 'e' or choix.lower() == 'exit':
-					sys.exit("\n"+information+" Bye ! :)")
+					sys.exit("\n" + information + " Bye ! :)")
 				elif choix.lower() == "1":
-					profile = input(" Profil: ")
+					profile = input(" Profilo: ")
 					data = pr.searchDatabase(profile, database=database)
 					profilerFunc(data, path=settings.pathDatabase)
 
@@ -134,8 +134,8 @@ try:
 					pr.showAllProfiles(database=database)
 
 				elif choix.lower() == '3':
-					print("\n"+Fore.YELLOW+"(Format: Prenom Nom)"+Fore.RESET)
-					name = input(" Nom du Profil: ")
+					print("\n"+Fore.YELLOW+"(Format: Nome Cognome)"+Fore.RESET)
+					name = input(" Nome del Profilo: ")
 					name = name.split(" ")
 					name = [i.capitalize() for i in name]
 					name = " ".join(name)
@@ -150,18 +150,18 @@ try:
 					create = pr.writeProfile(fileName=name, path=settings.pathDatabase, info=info)
 
 					if create:
-						print("\n"+found+" Le profil '%s' a été créé avec succès." % (name))
+						print("\n"+found+" Il profilo '%s' è stato creato con successo." % (name))
 					else:
-						print("\n"+warning+" Une erreur est survenue. Le profil '%s' n'a pas pu être créé." % (name))
+						print("\n"+warning+" C'è stato un errore. Il profilo '%s' non è stato creato." % (name))
 
 		elif choix.lower() == 'e' or choix.lower() == 'exit':
-			sys.exit("\n"+information+" Bye ! :)")
+			sys.exit("\n" + information + " Bye ! :)")
 		elif choix == '1':
 			clear()
 			menu()
 			print(lookupOption)
 			while True:
-				lookup = input("\n LittleBrother("+Fore.BLUE+"Lookup"+Fore.BLUE + "" + Fore.RESET + ")$ ")
+				lookup = input("\n LittleBrother(" + Fore.BLUE + "Lookup" + Fore.BLUE + "" + Fore.RESET + ")$ ")
 				if lookup == 'h':
 					print(helpLookup)
 				elif lookup.lower() == '1':
@@ -205,7 +205,7 @@ try:
 					sys.exit("\n"+information+" Bye ! :)")
 				else:
 					pass
-					# print("Commande introuvable")
+					# print("Comando inesistente")
 		elif choix == '2':
 			clear()
 			menu()
@@ -231,7 +231,7 @@ try:
 					sys.exit("\n"+information+" Bye ! :) ")
 				else:
 					pass
-					# print("Commande introuvable")
+					# print("Comando inesistente")
 		elif choix == "4":
 			clear()
 			menu()
@@ -274,6 +274,13 @@ try:
 					menu()
 					print(mainOption)
 					break
+				elif newCode == '6':
+					settings.codemonpays = "IT"
+					settings.monpays = "Italia"
+					clear()
+					menu()
+					print(mainOption)
+					break
 				elif newCode.lower() == 'b':
 					break
 				elif newCode.lower() == 'c':
@@ -284,7 +291,7 @@ try:
 					print(helpMsg)
 		else:
 			pass
-			# print("Commande introuvable")
+			# print("Comando inesistente")
 
 except KeyboardInterrupt:
 	sys.exit("\n"+information+" Bye ! :)")
