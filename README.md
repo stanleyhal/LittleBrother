@@ -1,38 +1,34 @@
 LittleBrother
 =
 
-LittleBrother est un outil de collectes d'informations (OSINT) qui vise à effectuer des recherches sur une personne française, suisse, luxembourgeoise ou belge. Il fournit divers modules qui permettent des recherches efficaces. LittleBrother ne requiert pas de clé API ni d'identifiant de connexion.
+LittleBrother è uno strumento utile per la raccolta di informazioni da fonti aperte (OSINT) che ha come fine la ricerca di informazioni su persone di nazionalità francese, svizzera, lussemburghese, belga e italiana (in questa versione). E' costutuita da svariati moduli che consentono di effettuare una ricerca efficace. Non occorrono chiavi API nè identificativi di connessione.
 
 ![](https://i.ibb.co/YdvfVPw/Capture.png)
 
 Disclaimer
 =
-LittleBrother a été développé pour faire des recherches sur soi-même et pour voir les informations privées et sensibles que l'on peut laisser derrière sur les réseaux sociaux. Je n'encourage en aucun cas l'utilisation de cet outil sur une autre personne que soi-même ou d'utiliser cet outil à mauvais escient.
+LittleBrother è stato sviluppato per effettuare ricerche su se stessi e per visualizzare le informazioni private e sensibili che ci si porta dietro con l'utilizzo dei social network. Si sconsiglia vivamente l'uso di questo strumento su altre persone all'infuori di se stessi o da un utilizzo improprio.
 
-Discord
+Novità nella versione 6.0
 =
-Si vous avez des questions, des idées, des problèmes concernant LittleBrother ou si vous voulez juste suivre l'avancement de ce projet.  
-- [Serveur Discord](https://discord.gg/r8GvsYM)
+- Inoltre (+)
+	- In questa versione è stata effettuata la traduzione in italiano del tool (originariamente in francese) ed è stata  aggiunta la possibilità di effettuare ricerche su db italiani. 
+	- E' stato aggiunto il file 'requirements.txt'.
+	- Nuova interfaccia.
+	- E' stato aggiunto un nuovo modulo di OSINT, il modulo 'Profilazione' sostituisce il database e di 'Dox maker' nella versione precedente di LittleBrother. Questo modulo permette di creare un profilo e di recuperare informazioni sui siti definiti dall'utilizzatore, salvaguardando questi dati e visualizzando gli ultimi post pubblicati sui social (ordinati a seconda della data di pubblicazione).
+	- Sono stati aggiunti nuovi servizi di ricerca (Annuari) a seconda della localizzazione dell'utilizzatore. LittleBrother utilizza il vostro indirizzo IP per determinare la Nazione da cui vi collegate. In nessun caso saranno condivisi il vostro indirizzo IP o altre informazioni private. Potrete scegliere una Nazione diversa rispetto alla vostra  per focalizzare le vostre ricerche.
+	- La ricerca su Instagram e LinkedIn sono state integrate nel 'Lookup di persona'.
+	- Nuovo modulo 'Ricerca dipendenti' che permette di ricercare dipendenti attraverso il nome di un'azienda e città.
+	- I moduli di ricerca di informazioni su Instagram e Facebook sono stati migliorati per estrarre maggiori informazioni.  
 
-Nouveautées version 6.0
-=
-- En plus (+)
-	- Un fichier 'requirements.txt' a été ajouté.
-	- Une nouvelle interface.
-	- Un nouveau module d'OSINT a été ajouté, le module 'Profiler' remplace la base de données et de 'Dox maker' dans la version anterieur de LittleBrother. Ce module permet de créer un profil et de récupérer des informations sur les sites définis par l'utilisateur, de sauvegarder ces données et d'afficher les derniers post publiés sur les réseaux (filtrés selon les dates de publication).
-	- De nouveaux services de recherche (Annuaires) ont été ajoutés selon la localisation de l'utilisateur. LittleBrother utilise votre IP pour déterminer le pays dans lequel vous vous trouvez. En aucun cas votre IP ou autre information privée sera partagé. Vous pourrez choisir un autre pays que le votre pour centraliser vos recherches.
-	- Recherche Instagram et LinkedIn intégrés à 'Personne Lookup'.
-	- Un nouveau module 'Employés recherche' qui permet de faire de trouver des personnes via une entreprise et une ville.
-	- Les modules de recherche d'informations Instagram et Facebook ont été améliorés pour extraire plus d'informations.  
-
-- En moins (-)
-	- Certaines librairies python (dnspython, socket et smtplib) ont été supprimées pour cette version.
-	- 'Social engineering tool' a été modifié pour 'Other tool' il ne comporte que le module de brute force d'un Hash.
-	- Les modules 'Spam Email' et 'SMS' ont été retirés de LittleBrother.
-	- Le module de création de Dox 'Dox maker' a été retiré de LittleBrother.
+- Sono state escluse (-)
+	- Alcune librerie python (dnspython, socket e smtplib) sono state eliminate in questa versione.
+	- 'Social engineering tool' è stato modificato in 'Other tool' ed è composto solamente dal modulo di brute-force di un Hash.
+	- I moduli 'Spam Email' e 'SMS' sono stati eliminati da LittleBrother.
+	- Il modulo di creazione di DoS 'Dox maker' è stato eliminato da LittleBrother.
 
 
-Compatible
+Compatibile
 =
 - Windows
 - MacOS
@@ -42,7 +38,7 @@ Python version:
 =
 - Python3
 
-Python Modules
+Moduli Python
 =
 - requests
 - bs4
@@ -50,7 +46,7 @@ Python Modules
 - colorama
 
 
-Installation
+Installazione
 =
     git clone https://github.com/Lulz3xploit/LittleBrother
     cd LittleBrother
@@ -62,30 +58,30 @@ Features
 =
  - Lookup:
 
-	- Phone lookup
-	- Email lookup
-	- Last name / First name lookup
-	- Surname lookup
-	- Addresse lookup
-	- Mail ip locator
-	- Ip locator
-	- Bssid locator
-	- Exif read
+	- Lookup telefonico
+	- Lookup  Email
+	- Lookup Cognome / Nome
+	- Lookup Cognome
+	- Lookup indirizzo
+	- Localizzazione di Mail ip
+	- Localizzazione Ip
+	- Localizzazione Bssid
+	- Lettura dati Exif
 	- Google search
 	- Twitter
 	- Instagram
 	- Facebook
-	- LinkedIn employee search (New !)
+	- Ricerca dipendenti LinkedIn (New !)
 	- Hash Bruteforce (New !)
 
- - Autre outils:
+ - Altri strumenti:
 
 	- Hash Bruteforce
 
-- Profiler (New !)
-	- Profiler an profile
+- Profilazione (New !)
+	- Profilare un profilo
 	- Database management
-	- Profile creator
+	- Creatore di Profili
 
 Contributors
 =
