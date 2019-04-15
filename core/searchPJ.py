@@ -21,7 +21,7 @@ def searchPJ(requete='', num=''):
 	soup = BeautifulSoup(page, "html.parser")
 	rep = testResponse(requete)
 	if rep == 1:
-		print(warning+" Aucun résultat pour votre recherche... o_o'")
+		print(warning+" La tua ricerca non ha prodotto alcun risultato... o_o'")
 		if num != '':
 			# phoneNumber(num)
 			pass
