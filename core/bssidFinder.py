@@ -9,7 +9,7 @@ wait = "["+Fore.MAGENTA+"*"+Fore.RESET+"]"
 
 def bssidFinder():
 	bssid = input(" MAC/Bssid:  ")
-	print("\n"+wait+" Locating '%s'..." % (bssid))
+	print("\n"+wait+" Sto localizzando '%s'..." % (bssid))
 	url = "https://api.mylnikov.org/wifi?v=1.1&bssid=%s"
 	response = requests.get(url % (bssid))
 	data = response.content.decode('utf-8')
@@ -18,14 +18,14 @@ def bssidFinder():
 
 	if code == "404":
 		print("\n[%s]\n" % (bssid))
-		print(warning+" Localisation Not Found")
+		print(warning+" Localizzazione not possibile")
 	else:
 		pass
 	
 	try:
 		localisation = str(values['data']['lat']) + ','+str(values['data']['lon'])
 		print("\n[ %s ]" % (bssid))
-		print(found+" Localisation: " + localisation)
-		print(found+" Maps: https://www.google.fr/maps?q=%s" % (localisation))
+		print(found+" Localizzazione: " + localisation)
+		print(found+" Maps: https://www.google.it/maps?q=%s" % (localisation))
 	except:
 		pass
