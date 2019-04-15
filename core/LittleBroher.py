@@ -18,7 +18,7 @@ def checkVersion():
 	if int(version) == 3:
 		pass
 	else:
-		sys.exit(warning+" Veuillez lancer la version 3 de python.")
+		sys.exit(warning+" Per favore utilizzate la versione 3 di python.")
 
 checkVersion()
 
@@ -315,77 +315,78 @@ def lb_header():
     return(random.choice(headers))
 
 helpMain = """
- Name                       Action
+ Nome                       Azione
  ----                       ------
- Lookup                     Faire des recherches sur une personne. 
- Social engineering         Utiliser des outils pour du social engineering.
- Make file                  Creer un fichier '.txt' pour y ecrire les infos obtenu.
- Show Database              Accedez a la base de donnee.
+ Lookup                     Effettuare ricerche su una persona. 
+ Social engineering         Utilizzare strumenti per il social engineering.
+ Make file                  Creare un file '.txt' per scrivere le info ottenute.
+ Show Database              Accedere al database.
 
- Exit                       Quitter le logiciel.
- Help                       Affiche se message.
- Clear                      Efface l'ecran."""
+ Exit                       Uscita.
+ Help                       Apre questo testo.
+ Clear                      Ripulisce la schermata."""
 
 helpLookup = """
- Name                             Action
+ Nome                             Azione
  ----                             ------
- Personne lookup                  Faire des recherches avec un nom, prenom et (ville).
- Username lookup                  Faire des recherches avec un pseudonyme.  
- Adresse lookup                   Faire des recherches avec une adresse.
- Phone lookup                     Faire des recherches avec un numero de telephone.
- IP lookup                        Faire des recherches avec une adresse IP.
- SSID locator                     Faire des recherches avec une adresse MAC/BSSID
- Email lookup                     Faire des recherches avec une adresse email.
- Mail tracer                      Faire des recherches avec l'entete d'un mail.
- Employés recherche               Recherche les employés d'une entreprise.
- Google search                    Faire des recherches sur google.
- Facebook graphSearch             Faire des recherche grace au graphSearch.
- twitter info                     Recuperer les informations d'un compte Twitter.
- instagram info                   Recuperer les informations d'un compte Instagram.
+ Lookup di persona                Effettua ricerche su Cognome, Nome e (città).
+ Lookup di username               Effettua ricerche su username.  
+ Lookup di indirizzo              Effettua ricerche su un indirizzo.
+ Lookup di nr. telef              Effettua ricerche su un numero di telefono.
+ IP lookup                        Effettua ricerche su un indirizzo IP.
+ SSID locator                     Effettua ricerche su un MAC address/BSSID
+ Lookup di email                  Effettua ricerche su un indirizzo email.
+ Mail tracer                      Effettua ricerche su l'header d'una email.
+ Ricerca dipendenti               Ricerca i dipendenti di un'azienda.
+ Google search                    Effettua ricerche su Google.
+ Facebook graphSearch             Effettua ricerche con graphSearch.
+ Twitter info                     Recupera le informazioni di un account Twitter.
+ Instagram info                   Recupera le informazioni di un account Instagram.
 
- Back main menu                   Revenir au menu principal.
- Exit script                      Pour quitter le logiciel.
- Clear screen                     Efface l'ecran."""
+ Back main menu                   Ritorna al menu principale.
+ Exit script                      Termina lo script.
+ Clear screen                     Ripulire la schermata."""
 
 helpOtherTool = """
- Name                             Action
+ Nome                             Azione
  ----                             ------
- Hash decrypter                   Essaye de décrypter un hash via une base de donnée en ligne.
+ Hash decrypter                   Cerca di decriptare un hash tramite un database online.
 
- Back main menu                   Revenir au menu principal.
- Exit script                      Pour quitter le logiciel.
- Clear screen                     Efface l'ecran."""
+ Back main menu                   Ritorna al menu principale.
+ Exit script                      Termina lo script.
+ Clear screen                     Ripulire la schermata."""
 
 helpProfiler = """
- Name                      Action
+ Nome                      Azione
  ----                      ------
- Search Profiles           Recherche un profile dans la base de donnee.
- Show all Profiles         Affiche tout les profiles de la base de donnee.
+ Cerca Profili     	   Ricerca un profilo nel database.
+ Visualizza Profili        Visualizza tutti i profili del database.
 
- Exit Database             Quitte la base de donnee pour retourner au menu principal.
- Help message              Affiche se message
+ Exit Database             Chiudi database e ritorna al menu pricipale.
+ Help message              Visualizza questo messaggio
 """
 
 helpCountry = """
- Name                      Action
+ Nome                      Azione
  ----                      ------
- FR                        Utiliser les services Francais.
- BE                        Utiliser les services Belge.
- CH                        Utiliser les services Suisse.
- LU                        Utiliser les services Luxembourgeois.
- All                       Utiliser tout les services.
+ FR                        Utilizza i servizi Francesi.
+ BE                        Utilizza i servizi Belghi.
+ CH                        Utilizza i servizi Svizzeri.
+ LU                        Utilizza i servizi Lussemburghesi.
+ All                       Utilizza tutti i servizi.
+ FR                        Utilizza i servizi Italiani.
 
- Back main menu            Revenir au menu principal.
- Exit script               Pour quitter le logiciel.
- Clear screen              Efface l'ecran."""
+ Back main menu            Ritorna al menu principale.
+ Exit script               Termina lo script.
+ Clear screen              Ripulire la schermata."""
 
 mainOption = """
  [1] Lookup
  [2] Other tool
- [3] Profiler
- [4] Change country
+ [3] Profilazione
+ [4] Cambia Nazionalità
 
- [e] Exit script    [h] Help Message    [c] Clear Screen"""
+ [e] Esci dallo script    [h] Help Message    [c] Ripulisci schermata"""
 
 text = ['Press F to hack', 'LEAVE ME HERE', 'The security is an illusion.', 'Profiler ctOS v2.0', 'DedSec takeover', 'Fsociety00.dat', 'Evil Corp',
  'Hello, friend', 'Hacking is our weapon', 'Hello, World', 'Login the world...', 'Big Brother is watching you.', 'Fuck Society', 'Wrench is calling...',
@@ -396,13 +397,13 @@ text = ['Press F to hack', 'LEAVE ME HERE', 'The security is an illusion.', 'Pro
  'dW4gZCdldXggdHJvdWUgw6AgcXUnYSB0J3JlIHNlaW4gcXVlIHNpIGNlIGNldHRl', 'Send me nudes: Harry.Truman@nsa.gov', "Access point 'AP-Zone51' was found nearby."]
 
 lookupOption = """
- [1] Personne lookup          [8] Mail tracer                     
- [2] Username lookup          [9] Employés recherche
- [3] Adresse lookup           [10] Google search
- [4] Phone lookup             [11] Facebook GraphSearch          
+ [1] Lookup di persona        [8] Mail tracer                     
+ [2] Lookup di username       [9] Ricerca dipendenti
+ [3] Lookup di indirizzo      [10] Google search
+ [4] Lookup di nr di telefono [11] Facebook GraphSearch          
  [5] IP lookup                [12] twitter info
  [6] SSID locator             [13] instagram info
- [7] Email lookup             
+ [7] Lookup di email             
 
  [b] back main menu    [e] Exit script    [h] Help Message    [c] Clear Screen"""
 
@@ -423,7 +424,7 @@ profilerOption = """
 countryMenu = """
  [1] FR (France)     [4] LU (Luxembourg) 
  [2] BE (Belgique)   [5] All (FR, BE, CH, LU)
- [3] CH (Suisse)
+ [3] CH (Suisse)	 [6] IT (Italia)
 
  [e] back main menu   [c] Clear screen   [h] Help message
 """
@@ -504,7 +505,7 @@ try:
 
 				elif choix.lower() == '3':
 					print("\n"+Fore.YELLOW+"(Format: Prenom Nom)"+Fore.RESET)
-					name = input(" Nom du Profil: ")
+					name = input(" Nome del Profilo: ")
 					name = name.split(" ")
 					name = [i.capitalize() for i in name]
 					name = " ".join(name)
@@ -519,9 +520,9 @@ try:
 					create = pr.writeProfile(fileName=name, path=pathDatabase, info=info)
 
 					if create:
-						print("\n"+found+" Le profil '%s' a été créé avec succès." % (name))
+						print("\n"+found+" Il profilo '%s' è stato creato con successo." % (name))
 					else:
-						print("\n"+warning+" Une erreur est survenue. Le profil '%s' n'a pas pu être créé." % (name))
+						print("\n"+warning+" E' avvenuto un errore. Il profilo '%s' non è stato creato." % (name))
 
 		elif choix.lower() == 'e':
 			sys.exit("\n"+information+" Bye ! :)")
@@ -575,7 +576,7 @@ try:
 					sys.exit("\n"+information+" Bye ! :)")
 				else:
 					pass
-					# print("Commande introuvable")
+					# print("Comando non presente")
 		elif choix == '2':
 			clear()
 			menu()
@@ -601,7 +602,7 @@ try:
 					sys.exit("\n"+information+" Bye ! :) ")
 				else:
 					pass
-					# print("Commande introuvable")
+					# print("Comando non presente")
 		elif choix == "4":
 			clear()
 			menu()
@@ -644,6 +645,13 @@ try:
 					menu()
 					print(mainOption)
 					break
+				elif newCode == '6':
+					codemonpays = "IT"
+					monpays = "Italia"
+					clear()
+					menu()
+					print(mainOption)
+					break
 				elif newCode.lower() == 'b':
 					break
 				elif newCode.lower() == 'c':
@@ -654,7 +662,7 @@ try:
 					print(helpMsg)
 		else:
 			pass
-			# print("Commande introuvable")
+			# print("Comando non presente")
 
 except KeyboardInterrupt:
 	sys.exit("\n"+information+" Bye ! :)")
