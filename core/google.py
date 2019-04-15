@@ -9,9 +9,9 @@ information = "["+Fore.BLUE+"I"+Fore.RESET+"]"
 wait = "["+Fore.MAGENTA+"*"+Fore.RESET+"]"
 
 def google():
-	print("\n"+information+" Renseignez Prénom, Nom, Ville, Département, Sport, Etablissement scolaire ...\n")
-	nom = input(" Recherche: ")
-	print("\n"+wait+" Recherche en cours...")
+	print("\n"+information+" Riporta Nome, Cognome, Città, Dipartimento, Sport, Istituto Scolastico...\n")
+	nom = input(" Ricerca: ")
+	print("\n"+wait+" Ricerca in corso...")
 	url = "https://www.google.com/search?num=20&q=\\%s\\"
 	try:
 		nom2 = nom.split(" ")
