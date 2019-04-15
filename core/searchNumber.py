@@ -4,6 +4,7 @@ from core.searchPJ import searchPJ
 from core.searchInfoNumero import searchInfoNumero
 from core.searchLocalCH import searchLocalCH
 from core.searchYellowLU import searchYellowLU
+from core.searchYellowIT import searchYellowIT
 from terminaltables import SingleTable
 
 def searchNumber(codemonpays):
@@ -54,6 +55,10 @@ def searchNumber(codemonpays):
 	elif codemonpays == "LU":
 		url = "https://www.yellow.lu/fr/annuaire-inverse/recherche?query="
 		searchYellowLU(url+num)
+
+	elif codemonpays == "IT":
+		url = "https://www.paginebianche.it/cerca-da-numero?qs="
+		searchYellowIT(url+num)
 
 	else:
 		# !!!! c'est deguelasse je sais... mais je n'avais pas le choix.. sa sera propre dans une prochaine MAJ... encore desole..
