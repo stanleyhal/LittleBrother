@@ -8,8 +8,8 @@ found = "["+Fore.GREEN+"+"+Fore.RESET+"]"
 wait = "["+Fore.MAGENTA+"*"+Fore.RESET+"]"
 
 def searchUserName():
-	username = input(" Pseudo: ")
-	print("\n"+wait+" Recherche '%s'..." % (username))
+	username = input(" Username: ")
+	print("\n"+wait+" Ricerca '%s'..." % (username))
 
 	# url = "https://www.google.com/search?num=100&q=\\\"%s\"\\"
 	url = "https://www.google.com/search?num=100&q=\\%s\\"
