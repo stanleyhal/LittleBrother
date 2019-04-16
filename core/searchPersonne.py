@@ -60,9 +60,9 @@ def searchPersonne(codemonpays):
 
 		elif codemonpays == 'IT':
 			# Italian search
-			url = "https://www.paginegialle.it/ricerca?query={}"
-			requete = requests.get(url.format(nome, città))
-			searchPG(requete)
+			url = "https://www.paginebianche.it/ricerca?qs={}&dv={}"
+			requete = requests.get(url.format(nom, city), headers=headers)
+			searchPJ(requete)
 
 		else:
 	        # Recherche FR
@@ -84,8 +84,9 @@ def searchPersonne(codemonpays):
 			searchYellowLU(url.format(nom))
 
 			# Recherche IT
-			url = "https://www.paginegialle.it/ricerca?qs={}&dv={}"
-			searchPG(requete)
+			url = "https://www.paginebianche.it/ricerca?qs={}&dv={}"
+			requete = requests.get(url.format(nom, city), headers=headers)
+			searchPJ(requete)
 
 # Copain d'avant search
 		searchCopainsdavant(nom, city)
