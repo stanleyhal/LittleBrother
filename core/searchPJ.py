@@ -63,10 +63,10 @@ def searchPJ(requete='', num=''):
 
 	regroup = zip(namesList2,addressesList2,numesList2, operatorList)
 	
-	title = " Particulier "
+	title = " Privato "
 
 	TABLE_DATA = [
-		('Name', 'Adresse', 'Phone', 'Operateur'),
+		('Nome', 'Indirizzo', 'Telefono', 'Operatore'),
 	]
 
 	listeInfos = []
