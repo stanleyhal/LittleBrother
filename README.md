@@ -48,7 +48,7 @@ Moduli Python
 
 Installazione
 =
-    git clone https://github.com/Lulz3xploit/LittleBrother
+    git clone https://github.com/stanleyhal/LittleBrother
     cd LittleBrother
     python3 -m pip install -r requirements.txt
     python3 LittleBrother.py
@@ -85,6 +85,6 @@ Features
 
 Contributors
 = 
-❤️ [lulz3xploit](https://github.com/lulz3xploit) ❤
+[lulz3xploit](https://github.com/lulz3xploit)
 = 
-❤️ [H3L](https://github.com/lrhel) ❤
+[H3L](https://github.com/lrhel)
