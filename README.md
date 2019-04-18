@@ -3,7 +3,7 @@ LittleBrother
 
 LittleBrother è uno strumento utile per la raccolta di informazioni da fonti aperte (OSINT) che ha come fine la ricerca di informazioni su persone di nazionalità francese, svizzera, lussemburghese, belga e italiana (in questa versione). E' costituita da svariati moduli che consentono di effettuare una ricerca efficace. Non occorrono chiavi API nè identificativi di connessione.
 
-![](https://i.ibb.co/YdvfVPw/Capture.png)
+![](https://i.ibb.co/f9M8QtM/screen-macosx.png)
 
 Disclaimer
 =
