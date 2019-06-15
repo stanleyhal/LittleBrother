@@ -7,7 +7,7 @@ class searchLinkedIn:
 		limit = "100"
 
 		self.linkedin_list = ["| LinkedIn", "on LinkedIn", "- LinkedIn", "LinkedIn"]
-		self.google_search = "https://"+server+"/search?num="+limit+"&q=%s %s insite:fr.linkedin.com/in"
+		self.google_search = "https://"+server+"/search?num="+limit+"&q=%s %s insite:it.linkedin.com/in"
 
 	def search(self, searching, city):
 		google_search = self.google_search % (searching, city)
