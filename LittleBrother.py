@@ -112,6 +112,8 @@ try:
 
 				choix = input("\n LittleBrother("+Fore.BLUE + "Profiler" + Fore.RESET + ")$ ")
 
+				info = {"URL": {}}
+				
 				if choix.lower() == 'h':
 					print(helpProfiler)
 				elif choix.lower() == 'b':
