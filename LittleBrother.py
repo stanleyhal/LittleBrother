@@ -126,33 +126,65 @@ try:
 				elif choix.lower() == 'e' or choix.lower() == 'exit':
 					sys.exit("\n" + information + " Bye ! :)")
 				elif choix.lower() == "1":
-					profile = input(" Profil: ")
-					data = pr.searchDatabase(profile, database=database)
-					profilerFunc(data, path=settings.pathDatabase)
+					if pr.count >= 1:
+						while True: 
+							profile = input(" Profilo: ")
+							if profile != '':
+								break
+						data = pr.searchDatabase(profile, database=database)
+						profilerFunc(data, path=settings.pathDatabase)
+					else:
+						print(warning+" Non è stato impostato alcun profilo. Si prega di crearne uno.")
 
 				elif choix.lower() == "2":
 					pr.showAllProfiles(database=database)
 
 				elif choix.lower() == '3':
-					print("\n"+Fore.YELLOW+"(Formato: Nome Cognome)"+Fore.RESET)
-					name = input(" Nome del Profilo: ")
+					print("\n"+Fore.YELLOW+"(Format: Nome Cognome)"+Fore.RESET)
+					while True:
+						name = input(" Nome del Profilo: ")
+						if name != '':
+							break
 					name = name.split(" ")
 					name = [i.capitalize() for i in name]
 					name = " ".join(name)
-					twitter = input(" Twitter: ")
+					while True:
+						print(question+" Vuoi iscrivere un account Twitter su questo Profilo ?")
+						choixPr = input(" [S/n]: " )
+						if choixPr.upper() == 'N':
+							break
+						else:
+							twitter = input("\n Twitter: ")
+							info['URL']['Twitter'] = twitter
+							break
 					# print(found+" %s" % (twitter))
-					instagram = input(" Instagram: ")
-					# print(found+" %s" % (instagram))
-					facebook = input(" Facebook: ")
-					# print(found+" %s" % (facebook))
-					info = {"URL": {"Twitter": twitter, "Facebook":facebook, "Instagram": instagram}}
+					while True:
+						print(question+" Vuoi iscrivere un account Instagram su questo Profilo ?")
+						choixPr = input(" [S/n]: " )
+						if choixPr.upper() == 'N':
+							break
+						else:
+							instagram = input("\n Instagram: ")
+							info['URL']['Instagram'] = instagram
+							break
+					while True:
+						print(question+" Vuoi iscrivere un account facebook su questo Profilo ?")
+						choixPr = input(" [S/n]: " )
+						if choixPr.upper() == 'N':
+							break
+						else:
+							facebook = input("\n Facebook: ")
+							info['URL']['Facebook'] = facebook
+							break
+					
 					create = pr.writeProfile(fileName=name, path=settings.pathDatabase, info=info)
 
 					if create:
-						print("\n"+found+" Il profilo '%s' è stato creato." % (name))
+						print("\n"+found+" Il profilo '%s' è stato creato con successo." % (name))
 					else:
-						print("\n"+warning+" C'è stato un errore. Il profilo '%s' non è stato creato" % (name))
+						print("\n"+warning+" C'è stato un errore. Il profilo '%s' non è stato creato." % (name))
 
+		
 		elif choix.lower() == 'e' or choix.lower() == 'exit':
 			sys.exit("\n" + information + " Bye ! :)")
 		elif choix == '1':
