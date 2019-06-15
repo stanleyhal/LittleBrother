@@ -84,4 +84,4 @@ class watcher:
 			else:
 				picturesList = {}
 
-self.medias = picturesList
+		self.medias = picturesList
