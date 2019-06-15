@@ -50,4 +50,4 @@ def getUrlGoogleSearch(content):
 			if not "/settings/ads" in url:
 				if not "/policies/faq" in url:
 						list_url.append(url)
-return(list_url)
+	return(list_url)
