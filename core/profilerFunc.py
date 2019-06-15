@@ -92,7 +92,7 @@ def profilerFunc(profile='', path=''):
 			fbtool = facebookSearchTool()
 			fbtool.getInfoProfile(url_facebook)
 			facebookID, facebookInfoDic['Facebook']['id'] = fbtool.facebookId, fbtool.facebookId
-			faecbookName, facebookInfoDic['Facebook']['name'] = fbtool.name, fbtool.name
+			facebookName, facebookInfoDic['Facebook']['name'] = fbtool.name, fbtool.name
 			facebookLocation, facebookInfoDic['Facebook']['location'] = fbtool.address, fbtool.address
 			facebookWork, facebookInfoDic['Facebook']['job'] = fbtool.job, fbtool.job
 			facebookUrl, facebookInfoDic['Facebook']['urlAccount'] = url_facebook, url_facebook
@@ -130,7 +130,7 @@ def profilerFunc(profile='', path=''):
 			elif data.upper() == "FACEBOOK":
 				if dataProfile[data]['name'] != facebookName:
 					dataProfile[data]['name'] = facebookName
-					list_news.append(faecbookName)
+					list_news.append(facebookName)
 				if dataProfile[data]['location'] != facebookLocation:
 					dataProfile[data]['location'] = facebookLocation
 					list_news.append(facebookLocation)
